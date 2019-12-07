@@ -6,6 +6,7 @@
 var Letter = require("./letter.js");
 var Word = function(randomWord){
     this.randomWord = randomWord;
+    this.letterArray = [];
     this.getGuessedWord = function(){
         var guessedWord = "";
         for( var i = 0; i < this.letterArray.length; i++){

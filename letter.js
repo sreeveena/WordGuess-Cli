@@ -9,6 +9,8 @@ function Letter(char){
             return "_";
         }else if(this.guessed == true){
             return this.char;
+        }else if(this.char == " "){
+            return " ";
         }else{
             return "_";
         }

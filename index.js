@@ -6,8 +6,12 @@ var word = ["frozen", "moana", "finding nemo", "monsters inc", "cars", "inside o
 
 function startGame(){
 
-    var random = Math.floor(Math.random() * word.length)+1;
+    var random = Math.floor(Math.random() * (word.length-1))+1;
+    console.log(random);
     var randomWord = word[random];
+    console.log(randomWord);
     var newWord = new Word(randomWord);
+    newWord.prepareWord();
     console.log(newWord.getGuessedWord());
 }
+startGame();
