@@ -1,5 +1,6 @@
 var inquirer = require('inquirer');
 var Word = require("./word.js");
+var Letter = require("./letter.js");
 
 var word = ["frozen", "moana", "finding nemo", "monsters inc", "cars", "inside out", "a bugs life"];
 
