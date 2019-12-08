@@ -27,7 +27,7 @@ function promptUser(){
             {
                 type: "input",
                 name: "letter",
-                message: "\n Pick a letter and press enter: "
+                message: "\n Please enter a letter and press return: "
             }
         ]).then (function(letter){ 
             counter--;   
@@ -89,7 +89,7 @@ function validate(input) {
         }
     }
     else {
-        console.log("\nPlease enter a letter, one at a time.\n");
-        promptUser();
+        console.log("\nPlease enter a valid letter, one at a time.\n");
+        counter++;
     }
 }
