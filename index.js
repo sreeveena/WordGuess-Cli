@@ -29,9 +29,9 @@ function promptUser(){
                 name: "letter",
                 message: "\n Pick a letter and press enter: "
             }
-        ]).then (function(letter){    
+        ]).then (function(letter){ 
+            counter--;   
             validate(letter);
-            counter--;
             promptUser();
         });
     }else{
@@ -46,7 +46,8 @@ function promptUser(){
                 default: true
             }
         ]).then (function(ans){
-            if(ans == true){
+            console.log(ans);
+            if(ans.repeat == true){
                 startGame();
             }
         });
@@ -63,13 +64,13 @@ function validate(input) {
         for(var i = 0; i < listOfGuess.length; i++){
             if(listOfGuess[i] == checkable){
                 console.log("\nSorry, you have already guessed this letter!\n");
+                counter++;
                 return ; 
             }  
         }
         listOfGuess.push(checkable);
         if (newWord.checkLetter(checkable) == false) {  
             console.log("\nSorry, wrong letter!\n");
-            counter--;
             console.log(counter + " guesses remaining");
             
         }
@@ -80,7 +81,6 @@ function validate(input) {
                 counter = 0;
 
             }else{
-                counter--;
                 console.log(counter + " guesses remaining");
                 console.log("correct letter: "+newWord.getGuessedWord());
 
