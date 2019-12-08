@@ -17,9 +17,12 @@ function Letter(char){
 
     }
     this.check = function(userChar){
+        var result = false;
         if(userChar == char){
           this.guessed = true;  
+          result = true;
         }
+        return result;
     }
    
 };

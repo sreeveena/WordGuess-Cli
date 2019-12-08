@@ -22,9 +22,13 @@ var Word = function(randomWord){
         }
     }
     this.checkLetter = function(char){
+        var result = false;
         for( var i = 0; i < this.letterArray.length; i++){
-            this.letterArray[i].check(char);
+            if(this.letterArray[i].check(char) == true){
+                result = true;
+            }
         } 
+        return result;
     }
     
 }

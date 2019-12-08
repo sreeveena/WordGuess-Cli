@@ -19,5 +19,6 @@
   "homepage": "https://github.com/sreeveena/WordGuess-Cli#readme",
   "dependencies": {
     "inquirer": "^7.0.0"
-  }
+  },
+  "devDependencies": {}
 }
