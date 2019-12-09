@@ -10,12 +10,12 @@ var randomWord;
 function startGame(){
 
     var random = Math.floor(Math.random() * (word.length-1))+1;
-    console.log(random);
+    // console.log(random);
     randomWord = word[random];
-    console.log(randomWord);
+    // console.log(randomWord);
     newWord = new Word(randomWord);
     newWord.prepareWord();
-    console.log(newWord.getGuessedWord());
+    // console.log(newWord.getGuessedWord());
     console.log("\nYou get 12 letter guesses to find the Pixar movie name.\n");
     promptUser();
 }
@@ -46,7 +46,7 @@ function promptUser(){
                 default: true
             }
         ]).then (function(ans){
-            console.log(ans);
+            // console.log(ans);
             if(ans.repeat == true){
                 startGame();
             }
