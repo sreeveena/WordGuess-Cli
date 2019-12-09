@@ -15,8 +15,8 @@ function startGame(){
     // console.log(randomWord);
     newWord = new Word(randomWord);
     newWord.prepareWord();
-    // console.log(newWord.getGuessedWord());
-    console.log("\nYou get 12 letter guesses to find the Pixar movie name.\n");
+    console.log("Pixar Movie: "+ newWord.getGuessedWord());
+    console.log("\nYou get 12 letter guesses to guess the above Pixar movie name.\n");
     promptUser();
 }
 startGame();

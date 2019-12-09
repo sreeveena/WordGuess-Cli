@@ -54,4 +54,5 @@ index.js file has startGame function which picks a random word from the word lis
     promptUser();
 }
 
-[!gif]()
+[!gif](./wordGuess.gif)
+[!gif](./wordGuess1.gif)
