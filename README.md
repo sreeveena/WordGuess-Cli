@@ -16,43 +16,39 @@ word.js file has a constructor, Word that depends on the Letter constructor from
 index.js file has startGame function which picks a random word from the word list and a validation function that validate the user guesses.
 
     function Letter(char){
-    this.char = char;
-    this.guessed = false;
-    this.get = function(){
-        if(!this.char){
-            return "_";
-        }else if(this.guessed == true){
-            return this.char;
-        }else if(this.char == " "){
-            return " ";
-        }else{
-            return "_";
-        }
+        this.char = char;
+        this.guessed = false;
+        this.get = function(){
+            if(!this.char){
+                return "_";
+            }else if(this.guessed == true){
+                return this.char;
+            }else if(this.char == " "){
+                return " ";
+            }else{
+                return "_";
+            }
 
-    }
-    this.check = function(userChar){
-        var result = false;
-        if(userChar == char){
-          this.guessed = true;  
-          result = true;
         }
-        return result;
-    }
-};
+        this.check = function(userChar){
+            var result = false;
+            if(userChar == char){
+            this.guessed = true;  
+            result = true;
+            }
+            return result;
+        }
+    };
 
 
     function startGame(){
-
-    var random = Math.floor(Math.random() * (word.length-1))+1;
-    // console.log(random);
-    randomWord = word[random];
-    // console.log(randomWord);
-    newWord = new Word(randomWord);
-    newWord.prepareWord();
-    // console.log(newWord.getGuessedWord());
-    console.log("\nYou get 12 letter guesses to find the Pixar movie name.\n");
-    promptUser();
-}
+        var random = Math.floor(Math.random() * (word.length-1))+1;
+        randomWord = word[random];
+        newWord = new Word(randomWord);
+        newWord.prepareWord();
+        console.log("\nYou get 12 letter guesses to find the Pixar movie name.\n");
+        promptUser();
+    }
 
 ![gif](./wordGuess.gif)
 ![gif](./wordGuess1.gif)
