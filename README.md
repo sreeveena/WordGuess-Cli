@@ -15,7 +15,7 @@ word.js file has a constructor, Word that depends on the Letter constructor from
 
 index.js file has startGame function which picks a random word from the word list and a validation function that validate the user guesses.
 
-   function Letter(char){
+    function Letter(char){
     this.char = char;
     this.guessed = false;
     this.get = function(){
