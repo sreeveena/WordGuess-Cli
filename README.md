@@ -38,10 +38,9 @@ index.js file has startGame function which picks a random word from the word lis
         }
         return result;
     }
-   
 };
 
-   function startGame(){
+    function startGame(){
 
     var random = Math.floor(Math.random() * (word.length-1))+1;
     // console.log(random);
