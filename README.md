@@ -40,6 +40,7 @@ index.js file has startGame function which picks a random word from the word lis
     }
 };
 
+
     function startGame(){
 
     var random = Math.floor(Math.random() * (word.length-1))+1;
