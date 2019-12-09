@@ -10,9 +10,9 @@ var randomWord;
 function startGame(){
 
     var random = Math.floor(Math.random() * (word.length-1))+1;
-    // console.log(random);
+    
     randomWord = word[random];
-    // console.log(randomWord);
+    
     newWord = new Word(randomWord);
     newWord.prepareWord();
     console.log("Pixar Movie: "+ newWord.getGuessedWord());
@@ -27,7 +27,8 @@ function promptUser(){
             {
                 type: "input",
                 name: "letter",
-                message: "\n Please enter a letter and press return: "
+                message: "Please enter a letter and press return: ",
+                prefix: ""
             }
         ]).then (function(letter){ 
             counter--;   
@@ -46,7 +47,6 @@ function promptUser(){
                 default: true
             }
         ]).then (function(ans){
-            // console.log(ans);
             if(ans.repeat == true){
                 startGame();
             }
@@ -56,9 +56,6 @@ function promptUser(){
 }
 //checks that the user's input is in correct format and compares the letter to gameWord to see if guess is correct
 function validate(input) {
-    // input = input.trim();
-    console.log(input.letter.length);
-    // console.log(input);
     if ((input.letter.length == 1) && /^[a-zA-Z]+$/.test(input.letter)) {
         var checkable = input.letter.toLowerCase();
         for(var i = 0; i < listOfGuess.length; i++){
